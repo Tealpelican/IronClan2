@@ -792,18 +792,26 @@
 
         // Player tab switching within sections
         function switchPlayer(sectionId, player) {
-            // Update active player tab
-            const section = document.querySelector(`#${sectionId}_${player}`).closest('.section');
-            section.querySelectorAll('.player-tab').forEach(tab => {
+            // Find all player tabs for this section and update active state
+            const allPlayerTabs = document.querySelectorAll(`[onclick*="switchPlayer('${sectionId}'"]`);
+            allPlayerTabs.forEach(tab => {
                 tab.classList.remove('active');
             });
             event.target.classList.add('active');
 
-            // Update active player content
-            section.querySelectorAll('.player-content').forEach(content => {
-                content.classList.remove('active');
+            // Find all player content divs for this section and update active state
+            players.forEach(p => {
+                const contentDiv = document.getElementById(`${sectionId}_${p}`);
+                if (contentDiv) {
+                    contentDiv.classList.remove('active');
+                }
             });
-            document.getElementById(`${sectionId}_${player}`).classList.add('active');
+            
+            // Activate the selected player's content
+            const activeContent = document.getElementById(`${sectionId}_${player}`);
+            if (activeContent) {
+                activeContent.classList.add('active');
+            }
 
             updateProgress(sectionId);
         }
