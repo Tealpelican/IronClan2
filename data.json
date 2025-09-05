@@ -1,0 +1,50 @@
+{
+    "Soy Teal": {
+        "goals": [],
+        "completedItems": {
+            "f2pQuests_The Restless Ghost": true,
+            "f2pQuests_Sheep Shearer": true,
+            "f2pQuests_Ernest the Chicken": true,
+            "f2pQuests_Shield of Arrav": true,
+            "f2pQuests_Vampire Slayer": true,
+            "gwdItems_Armadyl Chainskirt": true,
+            "gwdItems_Bandos Chestplate": true,
+            "gwdItems_Bandos Boots": true
+        },
+        "completedGoals": {
+            "goal_0": true
+        }
+    },
+    "SOY JUB": {
+        "goals": [],
+        "completedItems": {
+            "f2pQuests_Ernest the Chicken": true,
+            "f2pQuests_Imp Catcher": true,
+            "gwdItems_Armadyl Chainskirt": true,
+            "gwdItems_Bandos Chestplate": true,
+            "gwdItems_Saradomin Godsword": true,
+            "gwdItems_Armadyl Godsword": true
+        },
+        "completedGoals": {}
+    },
+    "SOY RD9": {
+        "goals": [],
+        "completedItems": {},
+        "completedGoals": {}
+    },
+    "SOY DJM": {
+        "goals": [],
+        "completedItems": {},
+        "completedGoals": {}
+    },
+    "SOY MagMan": {
+        "goals": [],
+        "completedItems": {
+            "f2pQuests_The Restless Ghost": true,
+            "f2pQuests_Sheep Shearer": true,
+            "f2pQuests_Ernest the Chicken": true,
+            "f2pQuests_Imp Catcher": true
+        },
+        "completedGoals": {}
+    }
+}
