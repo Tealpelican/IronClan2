@@ -589,7 +589,7 @@
         </div>
     </div>
 
-    <script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
         // Fixed team of 5 players
         const players = ['Soy Teal', 'SOY JUB', 'SOY RD9', 'SOY DJM', 'SOY MagMan'];
         
@@ -764,20 +764,11 @@
         // Player data storage
         let playerData = {};
 
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: "data.json", // Your JSON file path
-                dataType: "json", // Expect JSON data
-                success: function (data) {
-                    // data is already parsed as a JavaScript object
-                    processData(data);
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.error("Error loading JSON:", textStatus, errorThrown);
-                }
-            });
-        });
+        fetch('./data.json').then(response => {
+            return response.json();
+          }).then(data => {
+            console.log(data);
+          });
         
         // Initialize player data
         function initPlayerData() {
