@@ -764,6 +764,21 @@
         // Player data storage
         let playerData = {};
 
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "data.json", // Your JSON file path
+                dataType: "json", // Expect JSON data
+                success: function (data) {
+                    // data is already parsed as a JavaScript object
+                    processData(data);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error("Error loading JSON:", textStatus, errorThrown);
+                }
+            });
+        });
+        
         // Initialize player data
         function initPlayerData() {
             players.forEach(player => {
@@ -1000,6 +1015,18 @@
                 playerData = {};
             }
         }
+        function processData(data) {
+            try {
+                // Load from memory - would use localStorage in a real environment
+                if (data) {
+                    playerData = JSON.parse(data);
+                    console.log(data);
+                }
+            } catch (e) {
+                console.log('No saved data found');
+                playerData = {};
+            }
+        }
 
         // Event listeners for goal inputs
         function addGoalInputListeners() {
@@ -1017,7 +1044,7 @@
 
         // Initialize the app
         function init() {
-            loadData();
+            // loadData();
             initPlayerData();
             populateAllSections();
             updateAllProgress();
