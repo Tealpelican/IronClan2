@@ -232,3 +232,72 @@ function readFileAsText(file) {
         reader.readAsText(file);
     });
 }
+// Main tab switching
+function switchMainTab(tabName) {
+    document.querySelectorAll('.main-tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    document.querySelectorAll('.main-tab-button').forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    document.getElementById(tabName).classList.add('active');
+    event.target.classList.add('active');
+}
+
+// Player tab switching within sections
+function switchPlayer(sectionId, player) {
+    // Find all player tabs for this section and update active state
+    const allPlayerTabs = document.querySelectorAll(`[onclick*="switchPlayer('${sectionId}'"]`);
+    allPlayerTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    event.target.classList.add('active');
+
+    // Find all player content divs for this section and update active state
+    players.forEach(p => {
+        const contentDiv = document.getElementById(`${sectionId}_${p}`);
+        if (contentDiv) {
+            contentDiv.classList.remove('active');
+        }
+    });
+    
+    // Activate the selected player's content
+    const activeContent = document.getElementById(`${sectionId}_${player}`);
+    if (activeContent) {
+        activeContent.classList.add('active');
+    }
+
+    updateProgress(sectionId);
+}
+
+// Goals management
+function addGoal(player) {
+    const input = document.getElementById(`newGoal_${player}`);
+    const goalText = input.value.trim();
+    
+    if (goalText) {
+        playerData[player].goals.push(goalText);
+        input.value = '';
+        saveData();
+        updateGoalsDisplay(player);
+        updateGoalsProgress(player);
+    }
+}
+
+function toggleGoal(player, index) {
+    const goalKey = `goal_${index}`;
+    playerData[player].completedGoals[goalKey] = 
+        !playerData[player].completedGoals[goalKey];
+    
+    saveData();
+    updateGoalsDisplay(player);
+    updateGoalsProgress(player);
+}
+
+function deleteGoal(player, index) {
+    playerData[player].goals.splice(index, 1);
+    saveData();
+    updateGoalsDisplay(player);
+    updateGoalsProgress(player);
+}
