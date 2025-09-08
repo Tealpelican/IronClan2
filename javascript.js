@@ -310,3 +310,5 @@ function updateProgress(sectionId) {
     const activePlayerContent = document.querySelector(`[id^="${sectionId}_"].player-content.active`);
     if (!activePlayerContent) return;
 }
+
+init()
