@@ -1,0 +1,67 @@
+{
+    "Soy Teal": {
+        "goals": [
+            "Get 99 Slayer",
+            "Complete Dragon Slayer II"
+        ],
+        "completedItems": {
+            "f2pQuests_The Restless Ghost": true,
+            "f2pQuests_Sheep Shearer": true,
+            "f2pQuests_Ernest the Chicken": true,
+            "f2pQuests_Shield of Arrav": true,
+            "f2pQuests_Vampire Slayer": true,
+            "gwdItems_Armadyl Chainskirt": true,
+            "gwdItems_Bandos Chestplate": true,
+            "gwdItems_Bandos Boots": true,
+            "membersQuests_Waterfall Quest": true,
+            "coxItems_Dragon Claws": true
+        },
+        "completedGoals": {
+            "goal_0": true
+        }
+    },
+    "SOY JUB": {
+        "goals": [
+            "Complete Recipe for Disaster",
+            "Get Fighter Torso"
+        ],
+        "completedItems": {
+            "f2pQuests_Cook's Assistant": true,
+            "f2pQuests_Demon Slayer": true,
+            "baItems_Fighter Torso": true,
+            "membersQuests_Tree Gnome Village": true
+        },
+        "completedGoals": {}
+    },
+    "SOY DJM": {
+        "goals": [],
+        "completedItems": {
+            "f2pQuests_Dragon Slayer I": true,
+            "gwdItems_Armadyl Crossbow": true,
+            "pcItems_Void Knight Top": true,
+            "pcItems_Void Knight Robe": true
+        },
+        "completedGoals": {}
+    },
+    "SOY RD9": {
+        "goals": [
+            "Get Quest Cape"
+        ],
+        "completedItems": {
+            "membersQuests_Monkey Madness I": true,
+            "membersQuests_Recipe for Disaster": true,
+            "diaryTasks_Ardougne Easy Diary": true,
+            "combatAchievements_Fight Caves Completed": true
+        },
+        "completedGoals": {}
+    },
+    "SOY MagMan": {
+        "goals": [],
+        "completedItems": {
+            "tobItems_Ghrazi Rapier": true,
+            "coxItems_Twisted Bow": true,
+            "combatAchievements_Grandmaster Combat": true
+        },
+        "completedGoals": {}
+    }
+}
