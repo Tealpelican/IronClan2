@@ -301,3 +301,11 @@ function deleteGoal(player, index) {
     updateGoalsDisplay(player);
     updateGoalsProgress(player);
 }
+// Progress tracking
+function updateProgress(sectionId) {
+    const items = gameData[sectionId];
+    if (!items) return;
+    
+    // Get currently active player for this section
+    const activePlayerContent = document.querySelector(`[id^="${sectionId}_"].player-content.active`);
+    if (!activePlayerContent) return;
