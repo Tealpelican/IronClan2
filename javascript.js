@@ -309,3 +309,4 @@ function updateProgress(sectionId) {
     // Get currently active player for this section
     const activePlayerContent = document.querySelector(`[id^="${sectionId}_"].player-content.active`);
     if (!activePlayerContent) return;
+}
