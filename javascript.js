@@ -1,7 +1,7 @@
 // Global variables
 let gameData = {};
 let playerData = {};
-const players = ['Soy Teal', 'Player2', 'Player3', 'Player4', 'Player5']; // Update with your actual player names
+const players = ['Soy Teal', 'SOY JUB', 'SOY DJM', 'SOY RD9', 'SOY MagMan'];
 
 // Load JSON files
 async function loadGameData() {
