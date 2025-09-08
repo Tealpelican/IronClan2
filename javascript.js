@@ -82,6 +82,11 @@ async function savePlayerData() {
     }
 }
 
+// Alias for consistency
+function saveData() {
+    return savePlayerData();
+}
+
 // Load data from localStorage as fallback
 function loadFromLocalStorage() {
     try {
@@ -179,59 +184,159 @@ function getHardcodedGameData() {
         f2pQuests: [
             { name: "Cook's Assistant", icon: "🍳" },
             { name: "Demon Slayer", icon: "👹" },
-            { name: "The Restless Ghost", icon: "👻" }
-            // ... add more as fallback
+            { name: "The Restless Ghost", icon: "👻" },
+            { name: "Romeo & Juliet", icon: "💕" },
+            { name: "Sheep Shearer", icon: "🐑" },
+            { name: "Shield of Arrav", icon: "🛡️" },
+            { name: "Ernest the Chicken", icon: "🐔" },
+            { name: "Vampire Slayer", icon: "🧛" },
+            { name: "Imp Catcher", icon: "👹" },
+            { name: "Prince Ali Rescue", icon: "🤴" }
         ],
-        // ... other sections
+        membersQuests: [
+            { name: "Druidic Ritual", icon: "🧙" },
+            { name: "Lost City", icon: "🏙️" },
+            { name: "Monkey Madness I", icon: "🐵" },
+            { name: "Desert Treasure", icon: "🏺" },
+            { name: "Recipe for Disaster", icon: "🍽️" },
+            { name: "Dragon Slayer II", icon: "🐲" }
+        ],
+        diaries: [
+            { name: "Ardougne Easy", icon: "📝" },
+            { name: "Ardougne Medium", icon: "📄" },
+            { name: "Ardougne Hard", icon: "📋" },
+            { name: "Ardougne Elite", icon: "📜" },
+            { name: "Varrock Easy", icon: "📝" },
+            { name: "Varrock Medium", icon: "📄" },
+            { name: "Varrock Hard", icon: "📋" },
+            { name: "Varrock Elite", icon: "📜" }
+        ],
+        bosses: [
+            { name: "Giant Mole", icon: "🦔" },
+            { name: "King Black Dragon", icon: "🐲" },
+            { name: "Barrows", icon: "⚰️" },
+            { name: "Godwars Dungeon", icon: "⚔️" },
+            { name: "Zulrah", icon: "🐍" },
+            { name: "Vorkath", icon: "🐲" }
+        ]
     };
 }
 
-// Updated initialization function
-async function init() {
-    // Load game data first
-    await loadGameData();
+// MISSING FUNCTION: Populate all sections with game data
+function populateAllSections() {
+    console.log('Populating all sections...');
     
-    // Load player data
-    const playerDataLoaded = await loadPlayerData();
+    // Get all sections from gameData
+    Object.keys(gameData).forEach(sectionId => {
+        populateSection(sectionId, gameData[sectionId]);
+    });
     
-    // If loading from files failed, try localStorage
-    if (!playerDataLoaded) {
-        loadFromLocalStorage();
-    }
-    
-    // Initialize UI
-    populateAllSections();
-    updateAllProgress();
-    addGoalInputListeners();
-    addJSONInputListener();
+    // Populate goals sections
+    populateGoalsSections();
 }
 
-// Add JSON file input listener
-function addJSONInputListener() {
-    const jsonInput = document.getElementById('jsonFileInput');
-    if (jsonInput) {
-        jsonInput.addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file && file.type === 'application/json') {
-                handleJSONFile(file);
-            } else if (file) {
-                const statusDiv = document.getElementById('jsonStatus');
-                statusDiv.textContent = '❌ Please select a valid JSON file';
-                statusDiv.className = 'error';
-            }
-        });
-    }
-}
-
-// Utility function to read file as text
-function readFileAsText(file) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = (e) => resolve(e.target.result);
-        reader.onerror = (e) => reject(new Error('Failed to read file'));
-        reader.readAsText(file);
+// Populate a specific section with items
+function populateSection(sectionId, items) {
+    if (!items || !Array.isArray(items)) return;
+    
+    players.forEach(player => {
+        const container = document.getElementById(`${sectionId}_${player}`);
+        if (!container) return;
+        
+        container.innerHTML = items.map((item, index) => {
+            const itemKey = `${sectionId}_${index}`;
+            const isCompleted = playerData[player]?.completedItems?.[itemKey] || false;
+            
+            return `
+                <div class="item ${isCompleted ? 'completed' : ''}" 
+                     onclick="toggleItem('${player}', '${itemKey}', '${sectionId}')">
+                    <span class="icon">${item.icon || '📋'}</span>
+                    <span class="name">${item.name}</span>
+                    <span class="status">${isCompleted ? '✅' : '⭕'}</span>
+                </div>
+            `;
+        }).join('');
     });
 }
+
+// Populate goals sections
+function populateGoalsSections() {
+    players.forEach(player => {
+        updateGoalsDisplay(player);
+    });
+}
+
+// Update goals display for a specific player
+function updateGoalsDisplay(player) {
+    const container = document.getElementById(`goals_${player}`);
+    if (!container) return;
+    
+    const goals = playerData[player]?.goals || [];
+    
+    container.innerHTML = `
+        <div class="goal-input">
+            <input type="text" id="newGoal_${player}" placeholder="Add a new goal..." 
+                   onkeypress="if(event.key==='Enter') addGoal('${player}')">
+            <button onclick="addGoal('${player}')">Add Goal</button>
+        </div>
+        <div class="goals-list">
+            ${goals.map((goal, index) => {
+                const goalKey = `goal_${index}`;
+                const isCompleted = playerData[player]?.completedGoals?.[goalKey] || false;
+                
+                return `
+                    <div class="goal-item ${isCompleted ? 'completed' : ''}">
+                        <span class="goal-text" onclick="toggleGoal('${player}', ${index})">${goal}</span>
+                        <span class="goal-status">${isCompleted ? '✅' : '⭕'}</span>
+                        <button class="delete-btn" onclick="deleteGoal('${player}', ${index})">🗑️</button>
+                    </div>
+                `;
+            }).join('')}
+        </div>
+    `;
+}
+
+// Toggle item completion
+function toggleItem(player, itemKey, sectionId) {
+    if (!playerData[player]) {
+        playerData[player] = { goals: [], completedItems: {}, completedGoals: {} };
+    }
+    
+    playerData[player].completedItems[itemKey] = 
+        !playerData[player].completedItems[itemKey];
+    
+    saveData();
+    populateSection(sectionId, gameData[sectionId]);
+    updateProgress(sectionId);
+}
+
+// Update all progress bars
+function updateAllProgress() {
+    Object.keys(gameData).forEach(sectionId => {
+        updateProgress(sectionId);
+    });
+    
+    // Update goals progress
+    players.forEach(player => {
+        updateGoalsProgress(player);
+    });
+}
+
+// Update progress for goals
+function updateGoalsProgress(player) {
+    const goals = playerData[player]?.goals || [];
+    const completed = Object.values(playerData[player]?.completedGoals || {}).filter(Boolean).length;
+    
+    const progressBar = document.getElementById(`goalsProgress_${player}`);
+    const progressText = document.getElementById(`goalsProgressText_${player}`);
+    
+    if (progressBar && progressText) {
+        const percentage = goals.length > 0 ? (completed / goals.length) * 100 : 0;
+        progressBar.style.width = `${percentage}%`;
+        progressText.textContent = `${completed}/${goals.length} (${Math.round(percentage)}%)`;
+    }
+}
+
 // Main tab switching
 function switchMainTab(tabName) {
     document.querySelectorAll('.main-tab-content').forEach(tab => {
@@ -277,6 +382,9 @@ function addGoal(player) {
     const goalText = input.value.trim();
     
     if (goalText) {
+        if (!playerData[player]) {
+            playerData[player] = { goals: [], completedItems: {}, completedGoals: {} };
+        }
         playerData[player].goals.push(goalText);
         input.value = '';
         saveData();
@@ -287,6 +395,9 @@ function addGoal(player) {
 
 function toggleGoal(player, index) {
     const goalKey = `goal_${index}`;
+    if (!playerData[player]) {
+        playerData[player] = { goals: [], completedItems: {}, completedGoals: {} };
+    }
     playerData[player].completedGoals[goalKey] = 
         !playerData[player].completedGoals[goalKey];
     
@@ -296,11 +407,26 @@ function toggleGoal(player, index) {
 }
 
 function deleteGoal(player, index) {
+    if (!playerData[player]) return;
+    
     playerData[player].goals.splice(index, 1);
+    
+    // Rebuild completedGoals to maintain correct indices
+    const newCompletedGoals = {};
+    playerData[player].goals.forEach((goal, newIndex) => {
+        const oldKey = `goal_${index <= newIndex ? newIndex + 1 : newIndex}`;
+        const newKey = `goal_${newIndex}`;
+        if (playerData[player].completedGoals[oldKey]) {
+            newCompletedGoals[newKey] = true;
+        }
+    });
+    playerData[player].completedGoals = newCompletedGoals;
+    
     saveData();
     updateGoalsDisplay(player);
     updateGoalsProgress(player);
 }
+
 // Progress tracking
 function updateProgress(sectionId) {
     const items = gameData[sectionId];
@@ -309,6 +435,92 @@ function updateProgress(sectionId) {
     // Get currently active player for this section
     const activePlayerContent = document.querySelector(`[id^="${sectionId}_"].player-content.active`);
     if (!activePlayerContent) return;
+    
+    const player = activePlayerContent.id.replace(`${sectionId}_`, '');
+    const totalItems = items.length;
+    let completedItems = 0;
+    
+    // Count completed items for this player and section
+    for (let i = 0; i < totalItems; i++) {
+        const itemKey = `${sectionId}_${i}`;
+        if (playerData[player]?.completedItems?.[itemKey]) {
+            completedItems++;
+        }
+    }
+    
+    // Update progress bar
+    const progressBar = document.getElementById(`${sectionId}Progress`);
+    const progressText = document.getElementById(`${sectionId}ProgressText`);
+    
+    if (progressBar && progressText) {
+        const percentage = totalItems > 0 ? (completedItems / totalItems) * 100 : 0;
+        progressBar.style.width = `${percentage}%`;
+        progressText.textContent = `${completedItems}/${totalItems} (${Math.round(percentage)}%)`;
+    }
 }
 
-init()
+// Add goal input listeners
+function addGoalInputListeners() {
+    // This function can be used to add additional event listeners if needed
+    console.log('Goal input listeners initialized');
+}
+
+// Updated initialization function
+async function init() {
+    console.log('Initializing OSRS Progress Tracker...');
+    
+    // Load game data first
+    await loadGameData();
+    
+    // Load player data
+    const playerDataLoaded = await loadPlayerData();
+    
+    // If loading from files failed, try localStorage
+    if (!playerDataLoaded) {
+        loadFromLocalStorage();
+    }
+    
+    // Initialize UI
+    populateAllSections();
+    updateAllProgress();
+    addGoalInputListeners();
+    addJSONInputListener();
+    
+    console.log('Initialization complete');
+}
+
+// Add JSON file input listener
+function addJSONInputListener() {
+    const jsonInput = document.getElementById('jsonFileInput');
+    if (jsonInput) {
+        jsonInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.type === 'application/json') {
+                handleJSONFile(file);
+            } else if (file) {
+                const statusDiv = document.getElementById('jsonStatus');
+                if (statusDiv) {
+                    statusDiv.textContent = '❌ Please select a valid JSON file';
+                    statusDiv.className = 'error';
+                }
+            }
+        });
+    }
+}
+
+// Utility function to read file as text
+function readFileAsText(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target.result);
+        reader.onerror = (e) => reject(new Error('Failed to read file'));
+        reader.readAsText(file);
+    });
+}
+
+// Initialize when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
