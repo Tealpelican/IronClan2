@@ -1,185 +1,47 @@
-
-// Fixed team of 5 players
-const players = ['Soy Teal', 'SOY JUB', 'SOY RD9', 'SOY DJM', 'SOY MagMan'];
-
-// Data structure for all trackable items with icons
-const gameData = {
-    f2pQuests: [
-        { name: 'Cook\'s Assistant', icon: '🍳' },
-        { name: 'Demon Slayer', icon: '👹' },
-        { name: 'The Restless Ghost', icon: '👻' },
-        { name: 'Romeo & Juliet', icon: '💕' },
-        { name: 'Sheep Shearer', icon: '🐑' },
-        { name: 'Shield of Arrav', icon: '🛡️' },
-        { name: 'Ernest the Chicken', icon: '🐔' },
-        { name: 'Vampire Slayer', icon: '🧛' },
-        { name: 'Imp Catcher', icon: '👹' },
-        { name: 'Prince Ali Rescue', icon: '👑' },
-        { name: 'Doric\'s Quest', icon: '⛏️' },
-        { name: 'Black Knights\' Fortress', icon: '⚫' },
-        { name: 'Witch\'s Potion', icon: '🧪' },
-        { name: 'The Knight\'s Sword', icon: '⚔️' },
-        { name: 'Goblin Diplomacy', icon: '👺' },
-        { name: 'Pirates Treasure', icon: '💰' },
-        { name: 'Dragon Slayer I', icon: '🐲' },
-        { name: 'Rune Mysteries', icon: '🔮' },
-        { name: 'Misthalin Mystery', icon: '🔍' }
-    ],
-    membersQuests: [
-        { name: 'Waterfall Quest', icon: '🌊' },
-        { name: 'Tree Gnome Village', icon: '🌳' },
-        { name: 'The Grand Tree', icon: '🌲' },
-        { name: 'Monkey Madness I', icon: '🐒' },
-        { name: 'Lost City', icon: '🏙️' },
-        { name: 'Heroes\' Quest', icon: '🦸' },
-        { name: 'Druidic Ritual', icon: '🌿' },
-        { name: 'Merlin\'s Crystal', icon: '💎' },
-        { name: 'Holy Grail', icon: '🏆' },
-        { name: 'Legends\' Quest', icon: '📜' },
-        { name: 'Underground Pass', icon: '🕳️' },
-        { name: 'Biohazard', icon: '☣️' },
-        { name: 'Plague City', icon: '🦠' },
-        { name: 'Recipe for Disaster', icon: '🍖' },
-        { name: 'Desert Treasure I', icon: '💍' },
-        { name: 'Lunar Diplomacy', icon: '🌙' },
-        { name: 'Dream Mentor', icon: '😴' },
-        { name: 'Swan Song', icon: '🦢' },
-        { name: 'Mourning\'s End Part II', icon: '⚰️' },
-        { name: 'Monkey Madness II', icon: '🦍' },
-        { name: 'Dragon Slayer II', icon: '🐉' },
-        { name: 'Song of the Elves', icon: '🧝' },
-        { name: 'Sins of the Father', icon: '🩸' }
-    ],
-    gwdItems: [
-        { name: 'Armadyl Helmet', icon: '🪶' },
-        { name: 'Armadyl Chestplate', icon: '🪶' },
-        { name: 'Armadyl Chainskirt', icon: '🪶' },
-        { name: 'Armadyl Crossbow', icon: '🏹' },
-        { name: 'Bandos Chestplate', icon: '💪' },
-        { name: 'Bandos Tassets', icon: '💪' },
-        { name: 'Bandos Boots', icon: '👢' },
-        { name: 'Bandos Godsword', icon: '⚔️' },
-        { name: 'Saradomin Sword', icon: '🗡️' },
-        { name: 'Saradomin\'s Light', icon: '💡' },
-        { name: 'Armadyl Godsword', icon: '⚔️' },
-        { name: 'Zamorak Godsword', icon: '⚔️' },
-        { name: 'Saradomin Godsword', icon: '⚔️' },
-        { name: 'Staff of the Dead', icon: '🪄' },
-        { name: 'Zamorakian Spear', icon: '🔱' },
-        { name: 'Godsword Shard 1', icon: '⚡' },
-        { name: 'Godsword Shard 2', icon: '⚡' },
-        { name: 'Godsword Shard 3', icon: '⚡' },
-        { name: 'Godsword Hilt (Armadyl)', icon: '⚡' },
-        { name: 'Pet General Graardor', icon: '🐻' }
-    ],
-    coxItems: [
-        { name: 'Dexterous Prayer Scroll', icon: '📜' },
-        { name: 'Arcane Prayer Scroll', icon: '📜' },
-        { name: 'Dragon Hunter Crossbow', icon: '🏹' },
-        { name: 'Dragon Claws', icon: '🦅' },
-        { name: 'Elder Maul', icon: '🔨' },
-        { name: 'Kodai Insignia', icon: '🔮' },
-        { name: 'Twisted Bow', icon: '🏹' },
-        { name: 'Ancestral Hat', icon: '🧙' },
-        { name: 'Ancestral Robe Top', icon: '🧙' },
-        { name: 'Ancestral Robe Bottom', icon: '🧙' },
-        { name: 'Twisted Buckler', icon: '🛡️' },
-        { name: 'Olmlet Pet', icon: '🦎' },
-        { name: 'Dark Relic', icon: '⚫' },
-        { name: 'Metamorphic Dust', icon: '✨' }
-    ],
-    tobItems: [
-        { name: 'Avernic Defender Hilt', icon: '🛡️' },
-        { name: 'Ghrazi Rapier', icon: '⚔️' },
-        { name: 'Sanguinesti Staff', icon: '🩸' },
-        { name: 'Justiciar Faceguard', icon: '⚖️' },
-        { name: 'Justiciar Chestguard', icon: '⚖️' },
-        { name: 'Justiciar Legguards', icon: '⚖️' },
-        { name: 'Scythe of Vitur', icon: '💀' },
-        { name: 'Lil\' Zik Pet', icon: '🕷️' },
-        { name: 'Sanguine Dust', icon: '🩸' },
-        { name: 'Holy Ornament Kit', icon: '✨' },
-        { name: 'Sanguine Ornament Kit', icon: '🩸' },
-        { name: 'Lil\' Nibbler Pet', icon: '🐭' }
-    ],
-    baItems: [
-        { name: 'Fighter Hat', icon: '🪖' },
-        { name: 'Fighter Torso', icon: '💪' },
-        { name: 'Ranger Hat', icon: '🏹' },
-        { name: 'Ranger Boots', icon: '👢' },
-        { name: 'Runner Hat', icon: '🏃' },
-        { name: 'Runner Boots', icon: '👟' },
-        { name: 'Healer Hat', icon: '❤️' },
-        { name: 'Healer Boots', icon: '👟' },
-        { name: 'Penance Gloves', icon: '🧤' },
-        { name: 'Penance Skirt', icon: '👗' },
-        { name: 'Pet Penance Queen', icon: '👸' }
-    ],
-    pcItems: [
-        { name: 'Void Knight Top', icon: '⚫' },
-        { name: 'Void Knight Robe', icon: '⚫' },
-        { name: 'Void Knight Gloves', icon: '🧤' },
-        { name: 'Void Knight Mace', icon: '🔨' },
-        { name: 'Elite Void Top', icon: '⚫' },
-        { name: 'Elite Void Robe', icon: '⚫' },
-        { name: 'Void Ranger Helm', icon: '🏹' },
-        { name: 'Void Melee Helm', icon: '⚔️' },
-        { name: 'Void Mage Helm', icon: '🪄' }
-    ],
-    cwItems: [
-        { name: 'Castle Wars Decorative Sword', icon: '⚔️' },
-        { name: 'Castle Wars Decorative Shield', icon: '🛡️' },
-        { name: 'Castle Wars Decorative Armour', icon: '🏰' },
-        { name: 'Saradomin Banner', icon: '🏳️' },
-        { name: 'Zamorak Banner', icon: '🏴' },
-        { name: 'Castle Wars Hood', icon: '🧙' },
-        { name: 'Castle Wars Cloak', icon: '🧥' }
-    ],
-    combatAchievements: [
-        { name: 'JAD? More like, JAD? Completed It', icon: '🔥' },
-        { name: 'Perfect Zuk', icon: '🌋' },
-        { name: 'Grandmaster Combat', icon: '👑' },
-        { name: 'Combat Achievements Elite', icon: '⭐' },
-        { name: 'Combat Achievements Master', icon: '🏆' },
-        { name: 'Inferno Completed', icon: '🔥' },
-        { name: 'Fight Caves Completed', icon: '🌋' },
-        { name: 'Corporeal Beast Solo', icon: '👻' },
-        { name: 'Chambers of Xeric Solo', icon: '🏛️' }
-    ],
-    diaryTasks: [
-        { name: 'Ardougne Easy Diary', icon: '📖' },
-        { name: 'Ardougne Medium Diary', icon: '📗' },
-        { name: 'Ardougne Hard Diary', icon: '📘' },
-        { name: 'Ardougne Elite Diary', icon: '📙' },
-        { name: 'Desert Easy Diary', icon: '🏜️' },
-        { name: 'Desert Medium Diary', icon: '🏜️' },
-        { name: 'Desert Hard Diary', icon: '🏜️' },
-        { name: 'Desert Elite Diary', icon: '🏜️' },
-        { name: 'Falador Easy Diary', icon: '🏰' },
-        { name: 'Falador Medium Diary', icon: '🏰' },
-        { name: 'Falador Hard Diary', icon: '🏰' },
-        { name: 'Falador Elite Diary', icon: '🏰' },
-        { name: 'Fremennik Easy Diary', icon: '❄️' },
-        { name: 'Fremennik Medium Diary', icon: '❄️' },
-        { name: 'Fremennik Hard Diary', icon: '❄️' },
-        { name: 'Fremennik Elite Diary', icon: '❄️' },
-        { name: 'Kandarin Easy Diary', icon: '🌲' },
-        { name: 'Kandarin Medium Diary', icon: '🌲' },
-        { name: 'Kandarin Hard Diary', icon: '🌲' },
-        { name: 'Kandarin Elite Diary', icon: '🌲' }
-    ]
-};
-
-// Player data storage
+// Global variables
+let gameData = {};
 let playerData = {};
+const players = ['Soy Teal', 'Player2', 'Player3', 'Player4', 'Player5']; // Update with your actual player names
 
-fetch('./data.json').then(response => {
-    return response.json();
-  }).then(data => {
-    console.log(data);
-  });
+// Load JSON files
+async function loadGameData() {
+    try {
+        const response = await fetch('./gameData.json');
+        if (!response.ok) {
+            throw new Error(`Failed to load game data: ${response.status}`);
+        }
+        gameData = await response.json();
+        console.log('Game data loaded successfully');
+        return true;
+    } catch (error) {
+        console.error('Error loading game data:', error);
+        // Fallback to hardcoded data if needed
+        gameData = getHardcodedGameData();
+        return false;
+    }
+}
 
-// Initialize player data
+async function loadPlayerData() {
+    try {
+        const response = await fetch('./playerData.json');
+        if (!response.ok) {
+            throw new Error(`Failed to load player data: ${response.status}`);
+        }
+        playerData = await response.json();
+        console.log('Player data loaded successfully');
+        
+        // Ensure all players exist in the data
+        initPlayerData();
+        return true;
+    } catch (error) {
+        console.error('Error loading player data:', error);
+        // Initialize empty player data if file doesn't exist
+        initPlayerData();
+        return false;
+    }
+}
+
+// Initialize player data structure for any missing players
 function initPlayerData() {
     players.forEach(player => {
         if (!playerData[player]) {
@@ -192,264 +54,181 @@ function initPlayerData() {
     });
 }
 
-// Main tab switching
-function switchMainTab(tabName) {
-    document.querySelectorAll('.main-tab-content').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    document.querySelectorAll('.main-tab-button').forEach(button => {
-        button.classList.remove('active');
-    });
-    
-    document.getElementById(tabName).classList.add('active');
-    event.target.classList.add('active');
-}
-
-// Player tab switching within sections
-function switchPlayer(sectionId, player) {
-    // Find all player tabs for this section and update active state
-    const allPlayerTabs = document.querySelectorAll(`[onclick*="switchPlayer('${sectionId}'"]`);
-    allPlayerTabs.forEach(tab => {
-        tab.classList.remove('active');
-    });
-    event.target.classList.add('active');
-
-    // Find all player content divs for this section and update active state
-    players.forEach(p => {
-        const contentDiv = document.getElementById(`${sectionId}_${p}`);
-        if (contentDiv) {
-            contentDiv.classList.remove('active');
-        }
-    });
-    
-    // Activate the selected player's content
-    const activeContent = document.getElementById(`${sectionId}_${player}`);
-    if (activeContent) {
-        activeContent.classList.add('active');
-    }
-
-    updateProgress(sectionId);
-}
-
-// Goals management
-function addGoal(player) {
-    const input = document.getElementById(`newGoal_${player}`);
-    const goalText = input.value.trim();
-    
-    if (goalText) {
-        playerData[player].goals.push(goalText);
-        input.value = '';
-        saveData();
-        updateGoalsDisplay(player);
-        updateGoalsProgress(player);
-    }
-}
-
-function toggleGoal(player, index) {
-    const goalKey = `goal_${index}`;
-    playerData[player].completedGoals[goalKey] = 
-        !playerData[player].completedGoals[goalKey];
-    
-    saveData();
-    updateGoalsDisplay(player);
-    updateGoalsProgress(player);
-}
-
-function deleteGoal(player, index) {
-    playerData[player].goals.splice(index, 1);
-    saveData();
-    updateGoalsDisplay(player);
-    updateGoalsProgress(player);
-}
-
-function updateGoalsDisplay(player) {
-    const goalsList = document.getElementById(`goalsList_${player}`);
-    goalsList.innerHTML = '';
-    
-    playerData[player].goals.forEach((goal, index) => {
-        const goalItem = document.createElement('div');
-        goalItem.className = 'goal-item';
+// Save player data back to JSON (for development - in production you'd need a backend)
+async function savePlayerData() {
+    try {
+        // Note: This won't work directly in browser due to CORS restrictions
+        // You'd need a backend endpoint to save the JSON file
+        console.log('Saving player data:', playerData);
         
-        const goalKey = `goal_${index}`;
-        const isCompleted = playerData[player].completedGoals[goalKey] || false;
+        // For now, we'll save to localStorage as backup
+        localStorage.setItem('osrs_player_data', JSON.stringify(playerData));
         
-        if (isCompleted) {
-            goalItem.classList.add('completed');
-        }
-        
-        goalItem.innerHTML = `
-            <span>🎯 ${goal}</span>
-            <div>
-                <input type="checkbox" ${isCompleted ? 'checked' : ''} 
-                       onchange="toggleGoal('${player}', ${index})">
-                <button class="delete-btn" onclick="deleteGoal('${player}', ${index})">Delete</button>
-            </div>
-        `;
-        
-        goalsList.appendChild(goalItem);
-    });
-}
-
-function updateGoalsProgress(player) {
-    let completed = 0;
-    playerData[player].goals.forEach((goal, index) => {
-        const goalKey = `goal_${index}`;
-        if (playerData[player].completedGoals[goalKey]) {
-            completed++;
-        }
-    });
-    
-    const total = playerData[player].goals.length;
-    const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
-    const progressBar = document.getElementById(`goalsProgress_${player}`);
-    progressBar.style.width = `${percentage}%`;
-    progressBar.textContent = `${percentage}% (${completed}/${total})`;
-}
-
-// Item management
-function populateSection(sectionId, items, player) {
-    const container = document.getElementById(`${sectionId}_${player}`);
-    const itemsGrid = document.createElement('div');
-    itemsGrid.className = 'items-grid';
-    container.innerHTML = '';
-    
-    items.forEach(item => {
-        const itemDiv = document.createElement('div');
-        itemDiv.className = 'item';
-        
-        const itemKey = `${sectionId}_${item.name}`;
-        const isCompleted = playerData[player].completedItems[itemKey] || false;
-        
-        if (isCompleted) {
-            itemDiv.classList.add('completed');
-        }
-        
-        itemDiv.innerHTML = `
-            <div class="item-content">
-                <span class="item-icon">${item.icon}</span>
-                <span>${item.name}</span>
-            </div>
-            <input type="checkbox" ${isCompleted ? 'checked' : ''} 
-                   onchange="toggleItem('${sectionId}', '${item.name}', '${player}')">
-        `;
-        
-        itemsGrid.appendChild(itemDiv);
-    });
-    
-    container.appendChild(itemsGrid);
-}
-
-function toggleItem(sectionId, itemName, player) {
-    const itemKey = `${sectionId}_${itemName}`;
-    playerData[player].completedItems[itemKey] = 
-        !playerData[player].completedItems[itemKey];
-    
-    saveData();
-    populateSection(sectionId, gameData[sectionId], player);
-    updateProgress(sectionId);
-}
-
-function populateAllSections() {
-    Object.keys(gameData).forEach(sectionId => {
-        players.forEach(player => {
-            populateSection(sectionId, gameData[sectionId], player);
+        // In a real implementation, you'd POST to your server:
+        /*
+        const response = await fetch('./savePlayerData.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(playerData)
         });
-    });
-}
-
-// Progress tracking
-function updateProgress(sectionId) {
-    const items = gameData[sectionId];
-    if (!items) return;
-    
-    // Get currently active player for this section
-    const activePlayerContent = document.querySelector(`[id^="${sectionId}_"].player-content.active`);
-    if (!activePlayerContent) return;
-    
-    const activePlayer = activePlayerContent.id.split('_')[1];
-    
-    let completed = 0;
-    items.forEach(item => {
-        const itemKey = `${sectionId}_${item.name}`;
-        if (playerData[activePlayer].completedItems[itemKey]) {
-            completed++;
-        }
-    });
-    
-    const percentage = Math.round((completed / items.length) * 100);
-    const progressBar = document.getElementById(`${sectionId}Progress`) || 
-                      document.getElementById(`${sectionId.replace('Items', 'Progress')}`);
-    if (progressBar) {
-        progressBar.style.width = `${percentage}%`;
-        progressBar.textContent = `${percentage}% (${completed}/${items.length})`;
+        */
+        
+        return true;
+    } catch (error) {
+        console.error('Error saving player data:', error);
+        return false;
     }
 }
 
-function updateAllProgress() {
-    Object.keys(gameData).forEach(sectionId => {
-        updateProgress(sectionId);
-    });
-    
-    players.forEach(player => {
-        updateGoalsProgress(player);
-        updateGoalsDisplay(player);
-    });
-}
-
-// Data persistence
-function saveData() {
-    const data = JSON.stringify(playerData);
-    // Store in memory - would use localStorage in a real environment
-    window.osrsTrackerData = data;
-}
-
-function loadData() {
+// Load data from localStorage as fallback
+function loadFromLocalStorage() {
     try {
-        // Load from memory - would use localStorage in a real environment
-        const data = window.osrsTrackerData;
-        if (data) {
-            playerData = JSON.parse(data);
-        }
-    } catch (e) {
-        console.log('No saved data found');
-        playerData = {};
-    }
-}
-function processData(data) {
-    try {
-        // Load from memory - would use localStorage in a real environment
-        if (data) {
-            playerData = JSON.parse(data);
-            console.log(data);
-        }
-    } catch (e) {
-        console.log('No saved data found');
-        playerData = {};
-    }
-}
-
-// Event listeners for goal inputs
-function addGoalInputListeners() {
-    players.forEach(player => {
-        const input = document.getElementById(`newGoal_${player}`);
-        if (input) {
-            input.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    addGoal(player);
+        const stored = localStorage.getItem('osrs_player_data');
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            // Merge with existing playerData
+            Object.keys(parsed).forEach(player => {
+                if (players.includes(player)) {
+                    playerData[player] = parsed[player];
                 }
             });
+            return true;
         }
-    });
+    } catch (error) {
+        console.error('Error loading from localStorage:', error);
+    }
+    return false;
 }
 
-// Initialize the app
-function init() {
-    // loadData();
-    initPlayerData();
+// Import JSON file functionality
+async function handleJSONFile(file) {
+    const statusDiv = document.getElementById('jsonStatus');
+    const fileNameSpan = document.getElementById('jsonFileName');
+    
+    try {
+        fileNameSpan.textContent = file.name;
+        statusDiv.textContent = 'Processing JSON file...';
+        statusDiv.className = '';
+        
+        const text = await readFileAsText(file);
+        const importedData = JSON.parse(text);
+        
+        // Validate and import the data
+        if (importedData && typeof importedData === 'object') {
+            // Check if it's game data or player data
+            if (importedData.f2pQuests || importedData.membersQuests) {
+                // It's game data
+                gameData = importedData;
+                populateAllSections();
+                statusDiv.textContent = `✅ Successfully imported game data from ${file.name}`;
+            } else {
+                // It's player data
+                Object.keys(importedData).forEach(player => {
+                    if (players.includes(player)) {
+                        playerData[player] = {
+                            goals: importedData[player].goals || [],
+                            completedItems: importedData[player].completedItems || {},
+                            completedGoals: importedData[player].completedGoals || {}
+                        };
+                    }
+                });
+                populateAllSections();
+                updateAllProgress();
+                statusDiv.textContent = `✅ Successfully imported player data from ${file.name}`;
+            }
+            
+            savePlayerData();
+        } else {
+            throw new Error('Invalid JSON structure');
+        }
+    } catch (error) {
+        console.error('JSON Import Error:', error);
+        statusDiv.textContent = `❌ Error importing JSON: ${error.message}`;
+        statusDiv.className = 'error';
+        fileNameSpan.textContent = '';
+    }
+}
+
+// Export current player data as JSON
+function exportPlayerData() {
+    const dataStr = JSON.stringify(playerData, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = 'osrs_player_data.json';
+    link.click();
+}
+
+// Export current game data as JSON
+function exportGameData() {
+    const dataStr = JSON.stringify(gameData, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(dataBlob);
+    link.download = 'osrs_game_data.json';
+    link.click();
+}
+
+// Fallback hardcoded data in case JSON loading fails
+function getHardcodedGameData() {
+    return {
+        f2pQuests: [
+            { name: "Cook's Assistant", icon: "🍳" },
+            { name: "Demon Slayer", icon: "👹" },
+            { name: "The Restless Ghost", icon: "👻" }
+            // ... add more as fallback
+        ],
+        // ... other sections
+    };
+}
+
+// Updated initialization function
+async function init() {
+    // Load game data first
+    await loadGameData();
+    
+    // Load player data
+    const playerDataLoaded = await loadPlayerData();
+    
+    // If loading from files failed, try localStorage
+    if (!playerDataLoaded) {
+        loadFromLocalStorage();
+    }
+    
+    // Initialize UI
     populateAllSections();
     updateAllProgress();
     addGoalInputListeners();
+    addJSONInputListener();
 }
 
-// Start the app
-init();
+// Add JSON file input listener
+function addJSONInputListener() {
+    const jsonInput = document.getElementById('jsonFileInput');
+    if (jsonInput) {
+        jsonInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file && file.type === 'application/json') {
+                handleJSONFile(file);
+            } else if (file) {
+                const statusDiv = document.getElementById('jsonStatus');
+                statusDiv.textContent = '❌ Please select a valid JSON file';
+                statusDiv.className = 'error';
+            }
+        });
+    }
+}
+
+// Utility function to read file as text
+function readFileAsText(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target.result);
+        reader.onerror = (e) => reject(new Error('Failed to read file'));
+        reader.readAsText(file);
+    });
+}
