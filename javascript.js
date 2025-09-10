@@ -244,7 +244,7 @@ function populateSection(sectionId, items) {
         if (!container) return;
         
         container.innerHTML = items.map((item, index) => {
-            const itemKey = `${sectionId}_${index}`;
+            const itemKey = `${sectionId}_${item.name}`;
             const isCompleted = playerData[player]?.completedItems?.[itemKey] || false;
             
             return `
