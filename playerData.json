@@ -14,7 +14,23 @@
             "gwdItems_Bandos Chestplate": true,
             "gwdItems_Bandos Boots": true,
             "membersQuests_Waterfall Quest": true,
-            "coxItems_Dragon Claws": true
+            "f2pQuests_Cook's Assistant": true,
+            "f2pQuests_Demon Slayer": true,
+            "f2pQuests_Romeo & Juliet": true,
+            "f2pQuests_Imp Catcher": true,
+            "f2pQuests_Prince Ali Rescue": true,
+            "f2pQuests_Doric's Quest": true,
+            "f2pQuests_Black Knights' Fortress": true,
+            "f2pQuests_Witch's Potion": true,
+            "f2pQuests_The Knight's Sword": true,
+            "f2pQuests_Goblin Diplomacy": true,
+            "f2pQuests_Pirates Treasure": true,
+            "f2pQuests_Dragon Slayer I": true,
+            "f2pQuests_Misthalin Mystery": true,
+            "f2pQuests_Rune Mysteries": true,
+            "f2pQuests_X Marks the Spot": true,
+            "f2pQuests_Below Ice Mountain": true,
+            "f2pQuests_Corsair Curse": true
         },
         "completedGoals": {
             "goal_0": true
