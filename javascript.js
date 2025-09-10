@@ -249,7 +249,7 @@ function populateSection(sectionId, items) {
             
             return `
                 <div class="item ${isCompleted ? 'completed' : ''}" 
-                     onclick="toggleItem('${player}', `${itemKey}`, '${sectionId}')">
+                     onclick='toggleItem("${player}", "${itemKey}", "${sectionId}")'>
                     <span class="icon">${item.icon || '📋'}</span>
                     <span class="name">${item.name}</span>
                     <span class="status">${isCompleted ? '✅' : '⭕'}</span>
