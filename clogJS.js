@@ -561,7 +561,7 @@
                                 { name: 'Phoenix', collected: [false, false, false, false, false] },
                                 { name: 'Tome of fire', collected: [false, false, false, false, false] },
                                 { name: 'Warm gloves', collected: [false, false, false, false, false] },
-                                { name: 'Bruma torch', collected: [false, false, false, false, false] ]
+                                { name: 'Bruma torch', collected: [false, false, false, false, false] }
                             ]
                         },
                         zolcano: {
