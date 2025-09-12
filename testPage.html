@@ -335,11 +335,11 @@
             </div>
             
             <div class="player-tabs">
-                <div class="player-tab selected" onclick="selectPlayer(0)">Player 1</div>
-                <div class="player-tab" onclick="selectPlayer(1)">Player 2</div>
-                <div class="player-tab" onclick="selectPlayer(2)">Player 3</div>
-                <div class="player-tab" onclick="selectPlayer(3)">Player 4</div>
-                <div class="player-tab" onclick="selectPlayer(4)">Player 5</div>
+                <div class="player-tab selected" onclick="selectPlayer(0)">Soy Teal</div>
+                <div class="player-tab" onclick="selectPlayer(1)">SOY JUB</div>
+                <div class="player-tab" onclick="selectPlayer(2)">SOY DJM</div>
+                <div class="player-tab" onclick="selectPlayer(3)">SOY RD9</div>
+                <div class="player-tab" onclick="selectPlayer(4)">SOY Magman</div>
             </div>
             
             <div class="category-tabs">
@@ -386,6 +386,8 @@
     </div>
 
     <script>
+        let players = ["Soy Teal", "SOY JUB", "SOY DJM", "SOY RD9", "SOY Magman"]
+        let playersShort = ["T", "J", "D", "R", "M"]
         let selectedPlayer = 0;
         let activePlayers = [true, false, false, false, false]; // Which players are currently "active" (showing their items)
         let currentCategory = 'bosses';
@@ -684,7 +686,7 @@
                 item.collected.forEach((collected, playerIndex) => {
                     const indicator = document.createElement('div');
                     indicator.className = 'player-indicator';
-                    indicator.textContent = (playerIndex + 1).toString();
+                    indicator.textContent = (playersShort[playerIndex).toString();
                     
                     if (collected) {
                         indicator.classList.add('collected');
