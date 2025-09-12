@@ -11,36 +11,428 @@
             bosses: {
                 title: 'Bosses',
                 subcategories: {
-                    general_graardor: {
-                        title: 'General Graardor',
+                    abyssal_sire: {
+                        title: 'Abyssal Sire',
                         items: [
-                            { name: 'Bandos Chestplate', collected: [true, false, true, false, false] },
-                            { name: 'Bandos Tassets', collected: [false, true, false, true, false] },
-                            { name: 'Bandos Boots', collected: [true, false, false, false, true] },
-                            { name: 'Bandos Gloves', collected: [false, false, true, false, false] },
-                            { name: 'Pet General Graardor', collected: [false, false, false, false, true] },
-                            { name: 'Bandos Hilt', collected: [true, true, false, false, false] },
-                            { name: 'Godsword Shard 1', collected: [true, true, true, true, true] },
-                            { name: 'Godsword Shard 2', collected: [true, true, true, false, true] }
+                            { name: 'Abyssal orphan', collected: [false, false, false, false, false] },
+                            { name: 'Unsired', collected: [false, false, false, false, false] },
+                            { name: 'Abyssal head', collected: [false, false, false, false, false] },
+                            { name: 'Bludgeon spine', collected: [false, false, false, false, false] },
+                            { name: 'Bludgeon claw', collected: [false, false, false, false, false] },
+                            { name: 'Bludgeon axon', collected: [false, false, false, false, false] },
+                            { name: 'Jar of miasma', collected: [false, false, false, false, false] },
+                            { name: 'Abyssal dagger', collected: [false, false, false, false, false] },
+                            { name: 'Abyssal whip', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    alchemical_hydra: {
+                        title: 'Alchemical Hydra',
+                        items: [
+                            { name: 'Ikkle hydra', collected: [false, false, false, false, false] },
+                            { name: "Hydra's claw", collected: [false, false, false, false, false] },
+                            { name: 'Hydra tail', collected: [false, false, false, false, false] },
+                            { name: 'Hydra leather', collected: [false, false, false, false, false] },
+                            { name: "Hydra's fang", collected: [false, false, false, false, false] },
+                            { name: "Hydra's eye", collected: [false, false, false, false, false] },
+                            { name: "Hydra's heart", collected: [false, false, false, false, false] },
+                            { name: 'Dragon knife', collected: [false, false, false, false, false] },
+                            { name: 'Dragon thrownaxe', collected: [false, false, false, false, false] },
+                            { name: 'Jar of chemicals', collected: [false, false, false, false, false] },
+                            { name: 'Alchemical hydra heads', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    amoxliatl: {
+                        title: 'Amoxliatl',
+                        items: [
+                            { name: 'Moxi', collected: [false, false, false, false, false] },
+                            { name: 'Glacial temotli', collected: [false, false, false, false, false] },
+                            { name: 'Pendant of ates (inert)', collected: [false, false, false, false, false] },
+                            { name: 'Frozen tear', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    araxxor: {
+                        title: 'Araxxor',
+                        items: [
+                            { name: 'Nid', collected: [false, false, false, false, false] },
+                            { name: 'Araxyte venom sack', collected: [false, false, false, false, false] },
+                            { name: 'Spider cave teleport', collected: [false, false, false, false, false] },
+                            { name: 'Araxyte fang', collected: [false, false, false, false, false] },
+                            { name: 'Noxious point', collected: [false, false, false, false, false] },
+                            { name: 'Noxious blade', collected: [false, false, false, false, false] },
+                            { name: 'Noxious pommel', collected: [false, false, false, false, false] },
+                            { name: 'Araxyte head', collected: [false, false, false, false, false] },
+                            { name: 'Jar of venom', collected: [false, false, false, false, false] },
+                            { name: 'Coagulated venom', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    barrows_chests: {
+                        title: 'Barrows Chests',
+                        items: [
+                            { name: "Ahrim's hood", collected: [false, false, false, false, false] },
+                            { name: "Ahrim's robetop", collected: [false, false, false, false, false] },
+                            { name: "Ahrim's robeskirt", collected: [false, false, false, false, false] },
+                            { name: "Ahrim's staff", collected: [false, false, false, false, false] },
+                            { name: "Dharok's helm", collected: [false, false, false, false, false] },
+                            { name: "Dharok's platebody", collected: [false, false, false, false, false] },
+                            { name: "Dharok's platelegs", collected: [false, false, false, false, false] },
+                            { name: "Dharok's greataxe", collected: [false, false, false, false, false] },
+                            { name: "Guthan's helm", collected: [false, false, false, false, false] },
+                            { name: "Guthan's platebody", collected: [false, false, false, false, false] },
+                            { name: "Guthan's chainskirt", collected: [false, false, false, false, false] },
+                            { name: "Guthan's warspear", collected: [false, false, false, false, false] },
+                            { name: "Karil's coif", collected: [false, false, false, false, false] },
+                            { name: "Karil's leathertop", collected: [false, false, false, false, false] },
+                            { name: "Karil's leatherskirt", collected: [false, false, false, false, false] },
+                            { name: "Karil's crossbow", collected: [false, false, false, false, false] },
+                            { name: "Torag's helm", collected: [false, false, false, false, false] },
+                            { name: "Torag's platebody", collected: [false, false, false, false, false] },
+                            { name: "Torag's platelegs", collected: [false, false, false, false, false] },
+                            { name: "Torag's hammers", collected: [false, false, false, false, false] },
+                            { name: "Verac's helm", collected: [false, false, false, false, false] },
+                            { name: "Verac's brassard", collected: [false, false, false, false, false] },
+                            { name: "Verac's plateskirt", collected: [false, false, false, false, false] },
+                            { name: "Verac's flail", collected: [false, false, false, false, false] },
+                            { name: 'Barrows coffer', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    bryophyta: {
+                        title: 'Bryophyta',
+                        items: [
+                            { name: "Bryophyta's essence", collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    callisto_artio: {
+                        title: 'Callisto and Artio',
+                        items: [
+                            { name: 'Callisto cub', collected: [false, false, false, false, false] },
+                            { name: 'Tyrannical ring', collected: [false, false, false, false, false] },
+                            { name: 'Dragon pickaxe', collected: [false, false, false, false, false] },
+                            { name: 'Dragon 2h sword', collected: [false, false, false, false, false] },
+                            { name: 'Claws of callisto', collected: [false, false, false, false, false] },
+                            { name: 'Voidwaker hilt', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    cerberus: {
+                        title: 'Cerberus',
+                        items: [
+                            { name: 'Hellpuppy', collected: [false, false, false, false, false] },
+                            { name: 'Eternal crystal', collected: [false, false, false, false, false] },
+                            { name: 'Pegasian crystal', collected: [false, false, false, false, false] },
+                            { name: 'Primordial crystal', collected: [false, false, false, false, false] },
+                            { name: 'Jar of souls', collected: [false, false, false, false, false] },
+                            { name: 'Smouldering stone', collected: [false, false, false, false, false] },
+                            { name: 'Key master teleport', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    chaos_elemental: {
+                        title: 'Chaos Elemental',
+                        items: [
+                            { name: 'Pet chaos elemental', collected: [false, false, false, false, false] },
+                            { name: 'Dragon pickaxe', collected: [false, false, false, false, false] },
+                            { name: 'Dragon 2h sword', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    chaos_fanatic: {
+                        title: 'Chaos Fanatic',
+                        items: [
+                            { name: 'Pet chaos elemental', collected: [false, false, false, false, false] },
+                            { name: 'Odium shard 1', collected: [false, false, false, false, false] },
+                            { name: 'Malediction shard 1', collected: [false, false, false, false, false] }
                         ]
                     },
                     commander_zilyana: {
                         title: 'Commander Zilyana',
                         items: [
-                            { name: 'Saradomin Sword', collected: [true, false, false, true, false] },
-                            { name: 'Armadyl Crossbow', collected: [false, true, false, false, true] },
-                            { name: 'Saradomin Hilt', collected: [false, false, true, false, false] },
-                            { name: 'Pet Commander Zilyana', collected: [false, false, false, true, false] }
+                            { name: 'Pet zilyana', collected: [false, false, false, false, false] },
+                            { name: 'Armadyl crossbow', collected: [false, false, false, false, false] },
+                            { name: 'Saradomin hilt', collected: [false, false, false, false, false] },
+                            { name: 'Saradomin sword', collected: [false, false, false, false, false] },
+                            { name: "Saradomin's light", collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 1', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 2', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 3', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    corporeal_beast: {
+                        title: 'Corporeal Beast',
+                        items: [
+                            { name: 'Pet dark core', collected: [false, false, false, false, false] },
+                            { name: 'Elysian sigil', collected: [false, false, false, false, false] },
+                            { name: 'Spectral sigil', collected: [false, false, false, false, false] },
+                            { name: 'Arcane sigil', collected: [false, false, false, false, false] },
+                            { name: 'Holy elixir', collected: [false, false, false, false, false] },
+                            { name: 'Spirit shield', collected: [false, false, false, false, false] },
+                            { name: 'Jar of spirits', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    crazy_archaeologist: {
+                        title: 'Crazy archaeologist',
+                        items: [
+                            { name: 'Odium shard 2', collected: [false, false, false, false, false] },
+                            { name: 'Malediction shard 2', collected: [false, false, false, false, false] },
+                            { name: 'Fedora', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    dagannoth_kings: {
+                        title: 'Dagannoth Kings',
+                        items: [
+                            { name: 'Pet dagannoth prime', collected: [false, false, false, false, false] },
+                            { name: 'Pet dagannoth supreme', collected: [false, false, false, false, false] },
+                            { name: 'Pet dagannoth rex', collected: [false, false, false, false, false] },
+                            { name: 'Berserker ring', collected: [false, false, false, false, false] },
+                            { name: 'Archers ring', collected: [false, false, false, false, false] },
+                            { name: 'Seers ring', collected: [false, false, false, false, false] },
+                            { name: 'Warrior ring', collected: [false, false, false, false, false] },
+                            { name: 'Dragon axe', collected: [false, false, false, false, false] },
+                            { name: 'Seercull', collected: [false, false, false, false, false] },
+                            { name: 'Mud battlestaff', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    deranged_archaeologist: {
+                        title: 'Deranged Archaeologist',
+                        items: [
+                            { name: 'Steel ring', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    doom_of_mokhaiotl: {
+                        title: 'Doom of Mokhaiotl',
+                        items: [
+                            { name: 'Dom', collected: [false, false, false, false, false] },
+                            { name: 'Avernic treads', collected: [false, false, false, false, false] },
+                            { name: 'Eye of ayak (uncharged)', collected: [false, false, false, false, false] },
+                            { name: 'Mokhaiotl cloth', collected: [false, false, false, false, false] },
+                            { name: 'Mokhaiotl waystone', collected: [false, false, false, false, false] },
+                            { name: 'Demon tear', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    duke_sucellus: {
+                        title: 'Duke Sucellus',
+                        items: [
+                            { name: 'Baron', collected: [false, false, false, false, false] },
+                            { name: 'Eye of the duke', collected: [false, false, false, false, false] },
+                            { name: 'Virtus mask', collected: [false, false, false, false, false] },
+                            { name: 'Virtus robe top', collected: [false, false, false, false, false] },
+                            { name: 'Virtus robe bottom', collected: [false, false, false, false, false] },
+                            { name: 'Magus vestige', collected: [false, false, false, false, false] },
+                            { name: 'Ice quartz', collected: [false, false, false, false, false] },
+                            { name: 'Frozen tablet', collected: [false, false, false, false, false] },
+                            { name: 'Chromium ingot', collected: [false, false, false, false, false] },
+                            { name: "Awakener's orb", collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    fight_caves: {
+                        title: 'The Fight Caves',
+                        items: [
+                            { name: 'Tzrek-jad', collected: [false, false, false, false, false] },
+                            { name: 'Fire cape', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    fortis_colosseum: {
+                        title: 'Fortis Colosseum',
+                        items: [
+                            { name: 'Smol heredit', collected: [false, false, false, false, false] },
+                            { name: "Dizana's quiver (uncharged)", collected: [false, false, false, false, false] },
+                            { name: 'Sunfire fanatic cuirass', collected: [false, false, false, false, false] },
+                            { name: 'Sunfire fanatic chausses', collected: [false, false, false, false, false] },
+                            { name: 'Sunfire fanatic helm', collected: [false, false, false, false, false] },
+                            { name: 'Echo crystal', collected: [false, false, false, false, false] },
+                            { name: 'Tonalztics of ralos (uncharged)', collected: [false, false, false, false, false] },
+                            { name: 'Sunfire splinters', collected: [false, false, false, false, false] },
+                            { name: 'Uncut onyx', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    the_gauntlet: {
+                        title: 'The Gauntlet',
+                        items: [
+                            { name: 'Youngllef', collected: [false, false, false, false, false] },
+                            { name: 'Crystal armour seed', collected: [false, false, false, false, false] },
+                            { name: 'Crystal weapon seed', collected: [false, false, false, false, false] },
+                            { name: 'Enhanced crystal weapon seed', collected: [false, false, false, false, false] },
+                            { name: 'Gauntlet cape', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    general_graardor: {
+                        title: 'General Graardor',
+                        items: [
+                            { name: 'Pet general graardor', collected: [false, false, false, false, false] },
+                            { name: 'Bandos chestplate', collected: [false, false, false, false, false] },
+                            { name: 'Bandos tassets', collected: [false, false, false, false, false] },
+                            { name: 'Bandos boots', collected: [false, false, false, false, false] },
+                            { name: 'Bandos hilt', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 1', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 2', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 3', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    giant_mole: {
+                        title: 'Giant Mole',
+                        items: [
+                            { name: 'Baby mole', collected: [false, false, false, false, false] },
+                            { name: 'Mole skin', collected: [false, false, false, false, false] },
+                            { name: 'Mole claw', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    grotesque_guardians: {
+                        title: 'Grotesque Guardians',
+                        items: [
+                            { name: 'Noon', collected: [false, false, false, false, false] },
+                            { name: 'Black tourmaline core', collected: [false, false, false, false, false] },
+                            { name: 'Granite gloves', collected: [false, false, false, false, false] },
+                            { name: 'Granite ring', collected: [false, false, false, false, false] },
+                            { name: 'Granite hammer', collected: [false, false, false, false, false] },
+                            { name: 'Jar of stone', collected: [false, false, false, false, false] },
+                            { name: 'Granite dust', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    hespori: {
+                        title: 'Hespori',
+                        items: [
+                            { name: 'Bottomless compost bucket', collected: [false, false, false, false, false] },
+                            { name: 'Iasor seed', collected: [false, false, false, false, false] },
+                            { name: 'Kronos seed', collected: [false, false, false, false, false] },
+                            { name: 'Attas seed', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    the_hueycoatl: {
+                        title: 'The Hueycoatl',
+                        items: [
+                            { name: 'Huberte', collected: [false, false, false, false, false] },
+                            { name: 'Dragon hunter wand', collected: [false, false, false, false, false] },
+                            { name: 'Tome of earth (empty)', collected: [false, false, false, false, false] },
+                            { name: 'Soiled page', collected: [false, false, false, false, false] },
+                            { name: 'Hueycoatl hide', collected: [false, false, false, false, false] },
+                            { name: 'Huasca seed', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    the_inferno: {
+                        title: 'The Inferno',
+                        items: [
+                            { name: 'Jal-nib-rek', collected: [false, false, false, false, false] },
+                            { name: 'Infernal cape', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    kalphite_queen: {
+                        title: 'Kalphite Queen',
+                        items: [
+                            { name: 'Kalphite princess', collected: [false, false, false, false, false] },
+                            { name: 'Kq head', collected: [false, false, false, false, false] },
+                            { name: 'Jar of sand', collected: [false, false, false, false, false] },
+                            { name: 'Dragon 2h sword', collected: [false, false, false, false, false] },
+                            { name: 'Dragon chainbody', collected: [false, false, false, false, false] },
+                            { name: 'Dragon pickaxe', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    king_black_dragon: {
+                        title: 'King Black Dragon',
+                        items: [
+                            { name: 'Prince black dragon', collected: [false, false, false, false, false] },
+                            { name: 'Kbd heads', collected: [false, false, false, false, false] },
+                            { name: 'Dragon pickaxe', collected: [false, false, false, false, false] },
+                            { name: 'Draconic visage', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    kraken: {
+                        title: 'Kraken',
+                        items: [
+                            { name: 'Pet kraken', collected: [false, false, false, false, false] },
+                            { name: 'Kraken tentacle', collected: [false, false, false, false, false] },
+                            { name: 'Trident of the seas', collected: [false, false, false, false, false] },
+                            { name: 'Jar of dirt', collected: [false, false, false, false, false] }
                         ]
                     },
                     kreearra: {
-                        title: 'Kree\'arra',
+                        title: "Kree'arra",
                         items: [
-                            { name: 'Armadyl Helmet', collected: [true, false, true, false, true] },
-                            { name: 'Armadyl Chestplate', collected: [false, true, false, true, false] },
-                            { name: 'Armadyl Chainskirt', collected: [false, false, true, false, false] },
-                            { name: 'Armadyl Hilt', collected: [true, false, false, false, false] },
-                            { name: 'Pet Kree\'arra', collected: [false, false, false, false, true] }
+                            { name: "Pet kree'arra", collected: [false, false, false, false, false] },
+                            { name: 'Armadyl helmet', collected: [false, false, false, false, false] },
+                            { name: 'Armadyl chestplate', collected: [false, false, false, false, false] },
+                            { name: 'Armadyl chainskirt', collected: [false, false, false, false, false] },
+                            { name: 'Armadyl hilt', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 1', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 2', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 3', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    kril_tsutsaroth: {
+                        title: "K'ril Tsutsaroth",
+                        items: [
+                            { name: "Pet k'ril tsutsaroth", collected: [false, false, false, false, false] },
+                            { name: 'Staff of the dead', collected: [false, false, false, false, false] },
+                            { name: 'Zamorakian spear', collected: [false, false, false, false, false] },
+                            { name: 'Steam battlestaff', collected: [false, false, false, false, false] },
+                            { name: 'Zamorak hilt', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 1', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 2', collected: [false, false, false, false, false] },
+                            { name: 'Godsword shard 3', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    the_leviathan: {
+                        title: 'The Leviathan',
+                        items: [
+                            { name: "Lil'viathan", collected: [false, false, false, false, false] },
+                            { name: "Leviathan's lure", collected: [false, false, false, false, false] },
+                            { name: 'Virtus mask', collected: [false, false, false, false, false] },
+                            { name: 'Virtus robe top', collected: [false, false, false, false, false] },
+                            { name: 'Virtus robe bottom', collected: [false, false, false, false, false] },
+                            { name: 'Venator vestige', collected: [false, false, false, false, false] },
+                            { name: 'Smoke quartz', collected: [false, false, false, false, false] },
+                            { name: 'Scarred tablet', collected: [false, false, false, false, false] },
+                            { name: 'Chromium ingot', collected: [false, false, false, false, false] },
+                            { name: "Awakener's orb", collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    moons_of_peril: {
+                        title: 'Moons of Peril',
+                        items: [
+                            { name: 'Eclipse moon chestplate', collected: [false, false, false, false, false] },
+                            { name: 'Eclipse moon tassets', collected: [false, false, false, false, false] },
+                            { name: 'Eclipse moon helm', collected: [false, false, false, false, false] },
+                            { name: 'Eclipse atlatl', collected: [false, false, false, false, false] },
+                            { name: 'Blue moon chestplate', collected: [false, false, false, false, false] },
+                            { name: 'Blue moon tassets', collected: [false, false, false, false, false] },
+                            { name: 'Blue moon helm', collected: [false, false, false, false, false] },
+                            { name: 'Blue moon spear', collected: [false, false, false, false, false] },
+                            { name: 'Blood moon chestplate', collected: [false, false, false, false, false] },
+                            { name: 'Blood moon tassets', collected: [false, false, false, false, false] },
+                            { name: 'Blood moon helm', collected: [false, false, false, false, false] },
+                            { name: 'Dual macuahuitl', collected: [false, false, false, false, false] },
+                            { name: 'Atlatl dart', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    nex: {
+                        title: 'Nex',
+                        items: [
+                            { name: 'Nexling', collected: [false, false, false, false, false] },
+                            { name: 'Ancient hilt', collected: [false, false, false, false, false] },
+                            { name: 'Nihil horn', collected: [false, false, false, false, false] },
+                            { name: 'Zaryte vambraces', collected: [false, false, false, false, false] },
+                            { name: 'Torva full helm (damaged)', collected: [false, false, false, false, false] },
+                            { name: 'Torva platebody (damaged)', collected: [false, false, false, false, false] },
+                            { name: 'Torva platelegs (damaged)', collected: [false, false, false, false, false] },
+                            { name: 'Nihil shard', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    the_nightmare: {
+                        title: 'The Nightmare',
+                        items: [
+                            { name: 'Little nightmare', collected: [false, false, false, false, false] },
+                            { name: "Inquisitor's mace", collected: [false, false, false, false, false] },
+                            { name: "Inquisitor's great helm", collected: [false, false, false, false, false] },
+                            { name: "Inquisitor's hauberk", collected: [false, false, false, false, false] },
+                            { name: "Inquisitor's plateskirt", collected: [false, false, false, false, false] },
+                            { name: 'Nightmare staff', collected: [false, false, false, false, false] },
+                            { name: 'Volatile orb', collected: [false, false, false, false, false] },
+                            { name: 'Harmonised orb', collected: [false, false, false, false, false] },
+                            { name: 'Eldritch orb', collected: [false, false, false, false, false] },
+                            { name: 'Jar of dreams', collected: [false, false, false, false, false] },
+                            { name: 'Slepey tablet', collected: [false, false, false, false, false] },
+                            { name: 'Parasitic egg', collected: [false, false, false, false, false] }
+                        ]
+                    },
+                    obor: {
+                        title: 'Obor',
+                        items: [
+                            { name: 'Hill giant club', collected: [false, false, false, false, false] }
                         ]
                     },
                     kril_tsutsaroth: {
