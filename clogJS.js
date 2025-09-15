@@ -833,8 +833,8 @@
                 itemName.textContent = item.name;
 
                 let img = document.createElement('img'); 
-                img.src = '<img src="https://oldschool.runescape.wiki/images/'&itemName&'.png">';
-                img.alt = itemName;
+                img.src = "https://oldschool.runescape.wiki/images/"&item.name&".png";
+                img.alt = item.name;
                 itemSlot.appendChild(img);
                     
                 // Create player indicators
