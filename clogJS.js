@@ -820,11 +820,6 @@
                 
                 const itemSlot = document.createElement('div');
                 itemSlot.className = 'item-slot';
-                
-                let img = document.createElement('img'); 
-                img.src = '<img src="https://oldschool.runescape.wiki/images/"&itemName&".png">';
-                img.alt = itemName;
-                itemSlot.appendChild(img);
                     
                 // Check if all players have this item
                 const allCollected = item.collected.every(collected => collected);
@@ -836,7 +831,12 @@
                 const itemName = document.createElement('div');
                 itemName.className = 'item-name';
                 itemName.textContent = item.name;
-                
+
+                let img = document.createElement('img'); 
+                img.src = '<img src="https://oldschool.runescape.wiki/images/'&itemName&'.png">';
+                img.alt = itemName;
+                itemSlot.appendChild(img);
+                    
                 // Create player indicators
                 const playerIndicators = document.createElement('div');
                 playerIndicators.className = 'player-indicators';
