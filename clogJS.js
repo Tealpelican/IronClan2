@@ -28,7 +28,7 @@
                     alchemical_hydra: {
                         title: 'Alchemical Hydra',
                         items: [
-                            { name: 'Ikkle hydra (serpintine)', collected: [false, false, false, false, false] },
+                            { name: 'Ikkle hydra (serpentine)', collected: [false, false, false, false, false] },
                             { name: "Hydra's claw", collected: [false, false, false, false, false] },
                             { name: 'Hydra tail', collected: [false, false, false, false, false] },
                             { name: 'Hydra leather', collected: [false, false, false, false, false] },
@@ -506,7 +506,7 @@
                                 { name: 'Tackle box', collected: [false, false, false, false, false] },
                                 { name: 'Fish barrel', collected: [false, false, false, false, false] },
                                 { name: 'Dragon harpoon', collected: [false, false, false, false, false] },
-                                { name: 'Spirit flakes', collected: [false, false, false, false, false] }
+                                { name: 'Spirit flakes 9', collected: [false, false, false, false, false] }
                             ]
                         },
                         thermonuclear_smoke_devil: {
@@ -546,7 +546,7 @@
                         vetion: {
                             title: 'Vet\'ion',
                             items: [
-                                { name: "Vet'ion Jr.", collected: [false, false, false, false, false] },
+                                { name: "Vet'ion jr. (reborn)", collected: [false, false, false, false, false] },
                                 { name: 'Ring of the gods', collected: [false, false, false, false, false] },
                                 { name: 'Dragon pickaxe', collected: [false, false, false, false, false] },
                                 { name: 'Dragon 2h sword', collected: [false, false, false, false, false] },
@@ -568,7 +568,7 @@
                         title: 'The Whisperer',
                         items: [
                             { name: "Wisp", collected: [false, false, false, false, false] },
-                            { name: "Siren's Staff", collected: [false, false, false, false, false] },
+                            { name: "Siren's staff", collected: [false, false, false, false, false] },
                             { name: 'Virtus mask', collected: [false, false, false, false, false] },
                             { name: 'Virtus robe top', collected: [false, false, false, false, false] },
                             { name: 'Virtus robe bottom', collected: [false, false, false, false, false] },
@@ -609,7 +609,7 @@
                                 { name: 'Tanzanite fang', collected: [false, false, false, false, false] },
                                 { name: 'Zul-andra teleport', collected: [false, false, false, false, false] },
                                 { name: 'Uncut onyx', collected: [false, false, false, false, false] },
-                                { name: "Zulrah's scales", collected: [false, false, false, false, false] },
+                                { name: "Zulrah's scales 5", collected: [false, false, false, false, false] },
                             ]
                         }
                 }
