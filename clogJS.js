@@ -91,8 +91,7 @@
                             { name: "Verac's helm", collected: [false, false, false, false, false] },
                             { name: "Verac's brassard", collected: [false, false, false, false, false] },
                             { name: "Verac's plateskirt", collected: [false, false, false, false, false] },
-                            { name: "Verac's flail", collected: [false, false, false, false, false] },
-                            { name: 'Barrows coffer', collected: [false, false, false, false, false] }
+                            { name: "Verac's flail", collected: [false, false, false, false, false] }
                         ]
                     },
                     bryophyta: {
