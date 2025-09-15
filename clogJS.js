@@ -539,7 +539,7 @@
                                 { name: 'Treasonous ring', collected: [false, false, false, false, false] },
                                 { name: 'Dragon pickaxe', collected: [false, false, false, false, false] },
                                 { name: 'Dragon 2h sword', collected: [false, false, false, false, false] },
-                                { name: 'Fangs of Venenatis', collected: [false, false, false, false, false] },
+                                { name: 'Fangs of venenatis', collected: [false, false, false, false, false] },
                                 { name: 'Voidwaker gem', collected: [false, false, false, false, false] }
                             ]
                         },
