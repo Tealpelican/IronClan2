@@ -438,20 +438,33 @@
                         phantom_muspah: {
                             title: 'Phantom Muspah',
                             items: [
+                                { name: 'Muphin', collected: [false, false, false, false, false] },
                                 { name: 'Venator shard', collected: [false, false, false, false, false] },
-                                { name: 'Ancient essence', collected: [false, false, false, false, false] },
-                                { name: 'Frozen tablet', collected: [false, false, false, false, false] },
+                                { name: 'Ancient icon', collected: [false, false, false, false, false] },
+                                { name: 'Charged ice', collected: [false, false, false, false, false] },
                                 { name: 'Frozen cache', collected: [false, false, false, false, false] },
-                                { name: 'Muspah teleport', collected: [false, false, false, false, false] }
+                                { name: 'Ancient essence', collected: [false, false, false, false, false] }
+                            ]
+                        },
+                        royal_titans: {
+                            title: 'Royal Titans',
+                            items: [
+                                { name: 'Bran', collected: [false, false, false, false, false] },
+                                { name: 'Deadeye prayer scroll', collected: [false, false, false, false, false] },
+                                { name: 'Mystic vigor prayer scroll', collected: [false, false, false, false, false] },
+                                { name: 'Giantsoul amulet (uncharged)', collected: [false, false, false, false, false] },
+                                { name: 'Ice element staff crown', collected: [false, false, false, false, false] },
+                                { name: 'Fire element staff crown', collected: [false, false, false, false, false] },
+                                { name: 'Desiccated page', collected: [false, false, false, false, false] }
                             ]
                         },
                         sarachnis: {
                             title: 'Sarachnis',
                             items: [
                                 { name: 'Sraracha', collected: [false, false, false, false, false] },
-                                { name: 'Giant egg sac(full)', collected: [false, false, false, false, false] },
                                 { name: 'Jar of eyes', collected: [false, false, false, false, false] },
-                                { name: 'Clue scroll (hard)', collected: [false, false, false, false, false] }
+                                { name: 'Giant egg sac(full)', collected: [false, false, false, false, false] },
+                                { name: 'Sarachnis cudgel', collected: [false, false, false, false, false] }
                             ]
                         },
                         scorpia: {
@@ -489,36 +502,12 @@
                                 { name: 'Empty jar', collected: [false, false, false, false, false] }
                             ]
                         },
-                        the_gauntlet: {
-                            title: 'The Gauntlet',
-                            items: [
-                                { name: 'Youngllef', collected: [false, false, false, false, false] },
-                                { name: 'Blade of saeldor (inactive)', collected: [false, false, false, false, false] },
-                                { name: 'Crystal armour seed', collected: [false, false, false, false, false] },
-                                { name: 'Crystal weapon seed', collected: [false, false, false, false, false] },
-                                { name: 'Enhanced crystal weapon seed', collected: [false, false, false, false, false] }
-                            ]
-                        },
                         thermonuclear_smoke_devil: {
                             title: 'Thermonuclear Smoke Devil',
                             items: [
                                 { name: 'Smoke battlestaff', collected: [false, false, false, false, false] },
                                 { name: 'Occult necklace', collected: [false, false, false, false, false] },
                                 { name: 'Pet smoke devil', collected: [false, false, false, false, false] }
-                            ]
-                        },
-                        tzkal_zuk: {
-                            title: 'TzKal-Zuk',
-                            items: [
-                                { name: 'Infernal cape', collected: [false, false, false, false, false] },
-                                { name: 'Jal-nib-rek', collected: [false, false, false, false, false] }
-                            ]
-                        },
-                        tztok_jad: {
-                            title: 'TzTok-Jad',
-                            items: [
-                                { name: 'Fire cape', collected: [false, false, false, false, false] },
-                                { name: 'Tzrek-jad', collected: [false, false, false, false, false] }
                             ]
                         },
                         vardorvis: {
@@ -555,6 +544,21 @@
                                 { name: 'Dragonbone necklace', collected: [false, false, false, false, false] }
                             ]
                         },
+                    the_whisperer: {
+                        title: 'The Whisperer',
+                        items: [
+                            { name: "Wisp", collected: [false, false, false, false, false] },
+                            { name: "Sirens Staff", collected: [false, false, false, false, false] },
+                            { name: 'Virtus mask', collected: [false, false, false, false, false] },
+                            { name: 'Virtus robe top', collected: [false, false, false, false, false] },
+                            { name: 'Virtus robe bottom', collected: [false, false, false, false, false] },
+                            { name: 'Bellator vestige', collected: [false, false, false, false, false] },
+                            { name: 'Shadow quartz', collected: [false, false, false, false, false] },
+                            { name: 'Sirenic tablet', collected: [false, false, false, false, false] },
+                            { name: 'Chromium ingot', collected: [false, false, false, false, false] },
+                            { name: "Awakener's orb", collected: [false, false, false, false, false] }
+                        ]
+                    },
                         wintertodt: {
                             title: 'Wintertodt',
                             items: [
@@ -564,22 +568,28 @@
                                 { name: 'Bruma torch', collected: [false, false, false, false, false] }
                             ]
                         },
-                        zolcano: {
+                        zalcano: {
                             title: 'Zalcano',
                             items: [
                                 { name: 'Smolcano', collected: [false, false, false, false, false] },
                                 { name: 'Crystal tool seed', collected: [false, false, false, false, false] },
-                                { name: 'Onyx', collected: [false, false, false, false, false] }
+                                { name: 'Zalcano shard', collected: [false, false, false, false, false] },
+                                { name: 'Uncut onyx', collected: [false, false, false, false, false] }
                             ]
                         },
                         zulrah: {
                             title: 'Zulrah',
                             items: [
-                                { name: 'Tanzanite fang', collected: [false, false, false, false, false] },
+                                { name: 'Pet snakeling', collected: [false, false, false, false, false] },
+                                { name: 'Tanzanite mutagen', collected: [false, false, false, false, false] },
+                                { name: 'Magma mutagen', collected: [false, false, false, false, false] },
+                                { name: 'Jar of swamp', collected: [false, false, false, false, false] },
                                 { name: 'Magic fang', collected: [false, false, false, false, false] },
                                 { name: 'Serpentine visage', collected: [false, false, false, false, false] },
-                                { name: 'Pet snakeling', collected: [false, false, false, false, false] },
-                                { name: 'Jar of swamp', collected: [false, false, false, false, false] }
+                                { name: 'Tanzanite fang', collected: [false, false, false, false, false] },
+                                { name: 'Zulandra teleport', collected: [false, false, false, false, false] },
+                                { name: 'Uncut onyx', collected: [false, false, false, false, false] },
+                                { name: 'Zulrahs scales', collected: [false, false, false, false, false] },
                             ]
                         }
                 }
