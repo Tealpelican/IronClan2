@@ -833,7 +833,7 @@
                 itemName.textContent = item.name;
 
                 let img = document.createElement('img'); 
-                img.src = "https://oldschool.runescape.wiki/images/" + item.name + ".png";
+                img.src = "https://oldschool.runescape.wiki/images/" + item.name.replace(/ /g,"_") + ".png";
                 img.alt = item.name;
                 itemSlot.appendChild(img);
                     
