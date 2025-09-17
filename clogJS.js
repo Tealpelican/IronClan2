@@ -35,8 +35,8 @@
                             { name: "Hydra's fang", collected: [false, false, false, false, false] },
                             { name: "Hydra's eye", collected: [false, false, false, false, false] },
                             { name: "Hydra's heart", collected: [false, false, false, false, false] },
-                            { name: 'Dragon knife', collected: [false, false, false, false, false] },
-                            { name: 'Dragon thrownaxe', collected: [false, false, false, false, false] },
+                            { name: 'Dragon knife', collected: [false, false, false, true, false] },
+                            { name: 'Dragon thrownaxe', collected: [false, false, false, true, false] },
                             { name: 'Jar of chemicals', collected: [false, false, false, false, false] },
                             { name: 'Alchemical hydra heads', collected: [false, false, false, false, false] }
                         ]
@@ -46,8 +46,8 @@
                         items: [
                             { name: 'Moxi', collected: [false, false, false, false, false] },
                             { name: 'Glacial temotli', collected: [true, false, false, false, false] },
-                            { name: 'Pendant of ates (inert)', collected: [false, false, false, false, false] },
-                            { name: 'Frozen tear', collected: [true, false, false, false, false] }
+                            { name: 'Pendant of ates (inert)', collected: [false, false, false, true, false] },
+                            { name: 'Frozen tear', collected: [true, false, false, true, false] }
                         ]
                     },
                     araxxor: {
@@ -68,31 +68,31 @@
                     barrows_chests: {
                         title: 'Barrows Chests',
                         items: [
-                            { name: "Ahrim's hood", collected: [false, false, false, false, false] },
-                            { name: "Ahrim's robetop", collected: [false, false, false, false, false] },
+                            { name: "Ahrim's hood", collected: [false, false, false, true, false] },
+                            { name: "Ahrim's robetop", collected: [false, false, false, true, false] },
                             { name: "Ahrim's robeskirt", collected: [false, false, false, false, false] },
                             { name: "Ahrim's staff", collected: [false, false, false, false, false] },
-                            { name: "Dharok's helm", collected: [false, false, false, false, false] },
+                            { name: "Dharok's helm", collected: [false, false, false, true, false] },
                             { name: "Dharok's platebody", collected: [false, false, false, false, false] },
-                            { name: "Dharok's platelegs", collected: [false, false, false, false, false] },
+                            { name: "Dharok's platelegs", collected: [false, false, false, true, false] },
                             { name: "Dharok's greataxe", collected: [true, false, false, false, false] },
-                            { name: "Guthan's helm", collected: [false, false, false, false, false] },
-                            { name: "Guthan's platebody", collected: [false, false, false, false, false] },
+                            { name: "Guthan's helm", collected: [false, false, false, true, false] },
+                            { name: "Guthan's platebody", collected: [false, false, false, true, false] },
                             { name: "Guthan's chainskirt", collected: [false, false, false, false, false] },
                             { name: "Guthan's warspear", collected: [false, false, false, false, false] },
                             { name: "Karil's coif", collected: [false, false, false, false, false] },
-                            { name: "Karil's leathertop", collected: [false, false, false, false, false] },
-                            { name: "Karil's leatherskirt", collected: [false, false, false, false, false] },
-                            { name: "Karil's crossbow", collected: [false, false, false, false, false] },
-                            { name: "Torag's helm", collected: [false, false, false, false, false] },
-                            { name: "Torag's platebody", collected: [false, false, false, false, false] },
+                            { name: "Karil's leathertop", collected: [false, false, false, true, false] },
+                            { name: "Karil's leatherskirt", collected: [false, false, false, true, false] },
+                            { name: "Karil's crossbow", collected: [false, false, false, true, false] },
+                            { name: "Torag's helm", collected: [false, false, false, true, false] },
+                            { name: "Torag's platebody", collected: [false, false, false, true, false] },
                             { name: "Torag's platelegs", collected: [false, false, false, false, false] },
                             { name: "Torag's hammers", collected: [false, false, false, false, false] },
-                            { name: "Verac's helm", collected: [false, false, false, false, false] },
-                            { name: "Verac's brassard", collected: [true, false, false, false, false] },
-                            { name: "Verac's plateskirt", collected: [false, false, false, false, false] },
-                            { name: "Verac's flail", collected: [false, false, false, false, false] },
-                            { name: "Bolt rack 5", collected: [true, false, false, false, false] }
+                            { name: "Verac's helm", collected: [false, false, false, true, false] },
+                            { name: "Verac's brassard", collected: [true, false, false, true, false] },
+                            { name: "Verac's plateskirt", collected: [false, false, false, true, false] },
+                            { name: "Verac's flail", collected: [false, false, false, true, false] },
+                            { name: "Bolt rack 5", collected: [true, false, false, true, false] }
                         ]
                     },
                     bryophyta: {
@@ -179,11 +179,11 @@
                             { name: 'Pet dagannoth prime', collected: [false, false, false, false, false] },
                             { name: 'Pet dagannoth supreme', collected: [false, false, false, false, false] },
                             { name: 'Pet dagannoth rex', collected: [false, false, false, false, false] },
-                            { name: 'Berserker ring', collected: [false, false, false, false, false] },
+                            { name: 'Berserker ring', collected: [false, false, false, true, false] },
                             { name: 'Archers ring', collected: [false, false, false, false, false] },
                             { name: 'Seers ring', collected: [false, false, false, false, false] },
                             { name: 'Warrior ring', collected: [false, false, false, false, false] },
-                            { name: 'Dragon axe', collected: [false, false, false, false, false] },
+                            { name: 'Dragon axe', collected: [false, false, false, true, false] },
                             { name: 'Seercull', collected: [false, false, false, false, false] },
                             { name: 'Mud battlestaff', collected: [false, false, false, false, false] }
                         ]
@@ -224,7 +224,7 @@
                         title: 'The Fight Caves',
                         items: [
                             { name: 'Tzrek-jad', collected: [false, false, false, false, false] },
-                            { name: 'Fire cape', collected: [true, false, false, false, false] }
+                            { name: 'Fire cape', collected: [true, false, false, true, false] }
                         ]
                     },
                     fortis_colosseum: {
@@ -237,7 +237,7 @@
                             { name: 'Sunfire fanatic helm', collected: [false, false, false, false, false] },
                             { name: 'Echo crystal', collected: [false, false, false, false, false] },
                             { name: 'Tonalztics of ralos (uncharged)', collected: [false, false, false, false, false] },
-                            { name: 'Sunfire splinters 4', collected: [false, false, false, false, false] },
+                            { name: 'Sunfire splinters 4', collected: [false, false, false, true, false] },
                             { name: 'Uncut onyx', collected: [false, false, false, false, false] }
                         ]
                     },
@@ -268,8 +268,8 @@
                         title: 'Giant Mole',
                         items: [
                             { name: 'Baby mole', collected: [false, false, false, false, false] },
-                            { name: 'Mole skin', collected: [true, false, false, false, false] },
-                            { name: 'Mole claw', collected: [true, false, false, false, false] }
+                            { name: 'Mole skin', collected: [true, false, false, true, false] },
+                            { name: 'Mole claw', collected: [true, false, false, true, false] }
                         ]
                     },
                     grotesque_guardians: {
@@ -288,9 +288,9 @@
                         title: 'Hespori',
                         items: [
                             { name: 'Bottomless compost bucket', collected: [true, false, false, false, false] },
-                            { name: 'Iasor seed 5', collected: [true, false, false, false, false] },
-                            { name: 'Kronos seed 5', collected: [true, false, false, false, false] },
-                            { name: 'Attas seed 5', collected: [true, false, false, false, false] }
+                            { name: 'Iasor seed 5', collected: [true, false, false, true, false] },
+                            { name: 'Kronos seed 5', collected: [true, false, false, true, false] },
+                            { name: 'Attas seed 5', collected: [true, false, false, true, false] }
                         ]
                     },
                     the_hueycoatl: {
@@ -298,10 +298,10 @@
                         items: [
                             { name: 'Huberte', collected: [false, false, false, false, false] },
                             { name: 'Dragon hunter wand', collected: [false, false, false, false, false] },
-                            { name: 'Tome of earth (empty)', collected: [false, false, false, false, false] },
-                            { name: 'Soiled page', collected: [false, false, false, false, false] },
-                            { name: 'Hueycoatl hide', collected: [false, false, false, false, false] },
-                            { name: 'Huasca seed 1', collected: [false, false, false, false, false] }
+                            { name: 'Tome of earth (empty)', collected: [false, false, false, true, false] },
+                            { name: 'Soiled page', collected: [false, false, false, true, false] },
+                            { name: 'Hueycoatl hide', collected: [false, false, false, true, false] },
+                            { name: 'Huasca seed 1', collected: [false, false, false, true, false] }
                         ]
                     },
                     the_inferno: {
@@ -384,19 +384,19 @@
                     moons_of_peril: {
                         title: 'Moons of Peril',
                         items: [
-                            { name: 'Eclipse moon chestplate', collected: [false, false, false, false, false] },
-                            { name: 'Eclipse moon tassets', collected: [false, false, false, false, false] },
-                            { name: 'Eclipse moon helm', collected: [false, false, false, false, false] },
-                            { name: 'Eclipse atlatl', collected: [false, false, false, false, false] },
-                            { name: 'Blue moon chestplate', collected: [false, false, false, false, false] },
+                            { name: 'Eclipse moon chestplate', collected: [false, false, false, true, false] },
+                            { name: 'Eclipse moon tassets', collected: [false, false, false, true, false] },
+                            { name: 'Eclipse moon helm', collected: [false, false, false, true, false] },
+                            { name: 'Eclipse atlatl', collected: [false, false, false, true, false] },
+                            { name: 'Blue moon chestplate', collected: [false, false, false, true, false] },
                             { name: 'Blue moon tassets', collected: [false, false, false, false, false] },
-                            { name: 'Blue moon helm', collected: [false, false, false, false, false] },
-                            { name: 'Blue moon spear', collected: [false, false, false, false, false] },
-                            { name: 'Blood moon chestplate', collected: [false, false, false, false, false] },
-                            { name: 'Blood moon tassets', collected: [false, false, false, false, false] },
-                            { name: 'Blood moon helm', collected: [false, false, false, false, false] },
-                            { name: 'Dual macuahuitl', collected: [false, false, false, false, false] },
-                            { name: 'Atlatl dart 5', collected: [true, false, false, false, false] }
+                            { name: 'Blue moon helm', collected: [false, false, false, true, false] },
+                            { name: 'Blue moon spear', collected: [false, false, false, true, false] },
+                            { name: 'Blood moon chestplate', collected: [false, false, true, true, false] },
+                            { name: 'Blood moon tassets', collected: [false, false, false, true, false] },
+                            { name: 'Blood moon helm', collected: [false, false, false, true, false] },
+                            { name: 'Dual macuahuitl', collected: [false, false, false, true, false] },
+                            { name: 'Atlatl dart 5', collected: [true, false, false, true, false] }
                         ]
                     },
                     nex: {
@@ -451,11 +451,11 @@
                             items: [
                                 { name: 'Bran', collected: [false, false, false, false, false] },
                                 { name: 'Deadeye prayer scroll', collected: [false, false, false, false, false] },
-                                { name: 'Mystic vigour prayer scroll', collected: [true, false, false, false, false] },
-                                { name: 'Giantsoul amulet (uncharged)', collected: [true, false, false, false, false] },
-                                { name: 'Ice element staff crown', collected: [true, false, false, false, false] },
-                                { name: 'Fire element staff crown', collected: [false, false, false, false, false] },
-                                { name: 'Desiccated page', collected: [true, false, false, false, false] }
+                                { name: 'Mystic vigour prayer scroll', collected: [true, false, false, true, false] },
+                                { name: 'Giantsoul amulet (uncharged)', collected: [true, false, false, true, false] },
+                                { name: 'Ice element staff crown', collected: [true, false, false, true, false] },
+                                { name: 'Fire element staff crown', collected: [false, false, false, true, false] },
+                                { name: 'Desiccated page', collected: [true, false, false, true, false] }
                             ]
                         },
                         sarachnis: {
@@ -489,24 +489,24 @@
                                 { name: 'Dark totem', collected: [false, false, false, false, false] },
                                 { name: 'Clue scroll (hard)', collected: [false, false, false, false, false] },
                                 { name: 'Uncut onyx', collected: [false, false, false, false, false] },
-                                { name: 'Ancient shard', collected: [true, false, false, false, false] }
+                                { name: 'Ancient shard', collected: [true, false, false, true, false] }
                             ]
                         },
                         tempoross: {
                             title: 'Tempoross',
                             items: [
                                 { name: 'Tiny tempor', collected: [false, false, false, false, false] },
-                                { name: 'Big harpoonfish', collected: [false, false, false, false, false] },
+                                { name: 'Big harpoonfish', collected: [false, false, false, true, false] },
                                 { name: 'Spirit angler headband', collected: [false, false, false, false, false] },
                                 { name: 'Spirit angler top', collected: [false, false, false, false, false] },
                                 { name: 'Spirit angler waders', collected: [false, false, false, false, false] },
                                 { name: 'Spirit angler boots', collected: [false, false, false, false, false] },
                                 { name: 'Tome of water (empty)', collected: [false, false, false, false, false] },
-                                { name: 'Soaked page', collected: [true, false, false, false, false] },
+                                { name: 'Soaked page', collected: [true, false, false, true, false] },
                                 { name: 'Tackle box', collected: [false, false, false, false, false] },
                                 { name: 'Fish barrel', collected: [false, false, false, false, false] },
                                 { name: 'Dragon harpoon', collected: [false, false, false, false, false] },
-                                { name: 'Spirit flakes 9', collected: [true, false, false, false, false] }
+                                { name: 'Spirit flakes 9', collected: [true, false, false, true, false] }
                             ]
                         },
                         thermonuclear_smoke_devil: {
@@ -582,16 +582,16 @@
                         wintertodt: {
                             title: 'Wintertodt',
                             items: [
-                                { name: 'Phoenix', collected: [false, false, false, false, false] },
+                                { name: 'Phoenix', collected: [false, false, false, true, false] },
                                 { name: 'Tome of fire (empty)', collected: [false, false, false, false, false] },
-                                { name: 'Burnt pages', collected: [true, false, false, false, false] },
-                                { name: 'Pyromancer garb', collected: [true, false, false, false, false] },
-                                { name: 'Pyromancer hood', collected: [true, false, false, false, false] },
-                                { name: 'Pyromancer robe', collected: [true, false, false, false, false] },
-                                { name: 'Pyromancer boots', collected: [false, false, false, false, false] },
-                                { name: 'Warm gloves', collected: [false, false, false, false, false] },
-                                { name: 'Bruma torch', collected: [false, false, false, false, false] },
-                                { name: 'Dragon axe', collected: [false, false, false, false, false] }
+                                { name: 'Burnt pages', collected: [true, false, false, true, false] },
+                                { name: 'Pyromancer garb', collected: [true, false, false, true, false] },
+                                { name: 'Pyromancer hood', collected: [true, false, false, true, false] },
+                                { name: 'Pyromancer robe', collected: [true, false, false, true, false] },
+                                { name: 'Pyromancer boots', collected: [false, false, false, true, false] },
+                                { name: 'Warm gloves', collected: [false, false, false, true, false] },
+                                { name: 'Bruma torch', collected: [false, false, false, true, false] },
+                                { name: 'Dragon axe', collected: [false, false, false, true, false] }
                             ]
                         },
                         zalcano: {
