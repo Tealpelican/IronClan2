@@ -92,7 +92,7 @@
                             { name: "Verac's brassard", collected: [true, false, false, false, false] },
                             { name: "Verac's plateskirt", collected: [false, false, false, false, false] },
                             { name: "Verac's flail", collected: [false, false, false, false, false] },
-                            { name: "Bolt rack", collected: [true, false, false, false, false] }
+                            { name: "Bolt rack 5", collected: [true, false, false, false, false] }
                         ]
                     },
                     bryophyta: {
@@ -479,7 +479,7 @@
                             title: 'Scurrius',
                             items: [
                                 { name: 'Scurry', collected: [false, false, false, false, false] },
-                                { name: "Scurrius' spine", collected: [false, false, false, false, false] }
+                                { name: "Scurrius' spine", collected: [true, false, false, false, false] }
                             ]
                         },
                         skotizo: {
